@@ -31,15 +31,17 @@ logger = logging.getLogger(__name__)
 app = FastAPI()
 api_router = APIRouter(prefix="/api")
 
-EMAIL_BASE_URL = "https://integrations.emergentagent.com"
-EMAIL_KEY = os.environ["EMERGENT_EMAIL_KEY"]
-EMAIL_FROM_NAME = os.environ["EMAIL_FROM_NAME"]
+# ---------------- Email config (Resend instead of Emergent) ----------------
+# Sign up free at https://resend.com -> get API key -> verify a sending domain
+# (or use their default test domain onboarding@resend.dev for quick testing)
+RESEND_API_KEY = os.environ["RESEND_API_KEY"]
+EMAIL_FROM = os.environ["EMAIL_FROM"]  # e.g. "MJ Wines International <hello@mjwines.co>"
 EMAIL_REPLY_TO = os.environ.get("EMAIL_REPLY_TO")
 OWNER_EMAIL = os.environ["OWNER_EMAIL"]
 ADMIN_PASSCODE = os.environ["ADMIN_PASSCODE"]
 
 
-# ---------------- Email guardrail gate ----------------
+# ---------------- Email guardrail gate (unchanged logic) ----------------
 _SHORTENERS = ("bit.ly", "tinyurl.com", "t.co", "is.gd", "cutt.ly", "goo.gl", "rebrand.ly")
 _CRED_ASK = ("reply with your password", "reply with the code", "send your password", "cvv",
              "send us your password", "enter your password below", "confirm your card number",
@@ -114,15 +116,21 @@ def _assert_safe_email(subject: str, html: str) -> None:
 
 
 async def send_email(*, to: str, subject: str, html: str) -> Optional[str]:
+    """Sends email via Resend (https://resend.com) instead of Emergent's email integration."""
     _assert_safe_email(subject, html)
-    payload = {"to": [to], "subject": subject, "html": html, "from_name": EMAIL_FROM_NAME}
+    payload = {
+        "from": EMAIL_FROM,
+        "to": [to],
+        "subject": subject,
+        "html": html,
+    }
     if EMAIL_REPLY_TO:
-        payload["contact_email"] = EMAIL_REPLY_TO
+        payload["reply_to"] = EMAIL_REPLY_TO
     try:
         async with httpx.AsyncClient(timeout=30) as http_client:
             resp = await http_client.post(
-                f"{EMAIL_BASE_URL}/api/v1/email/send",
-                headers={"X-Email-Key": EMAIL_KEY},
+                "https://api.resend.com/emails",
+                headers={"Authorization": f"Bearer {RESEND_API_KEY}"},
                 json=payload,
             )
         resp.raise_for_status()
@@ -132,7 +140,7 @@ async def send_email(*, to: str, subject: str, html: str) -> Optional[str]:
         return None
 
 
-# ---------------- Models ----------------
+# ---------------- Models (unchanged) ----------------
 class Enquiry(BaseModel):
     id: str = Field(default_factory=lambda: str(uuid.uuid4()))
     name: str
@@ -190,7 +198,7 @@ def _enquiry_email_html(e: Enquiry) -> str:
             f'<h1 style="font-size:22px;color:#111;margin:6px 0 18px">A new enquiry just arrived</h1>'
             f'<table role="presentation" width="100%" style="background:#fff;border:1px solid #eee;'
             f'border-radius:6px">{rows}</table>'
-            f'<p style="font-size:12px;color:#888;margin-top:22px">Sent by {escape(EMAIL_FROM_NAME)}. '
+            f'<p style="font-size:12px;color:#888;margin-top:22px">Sent by {escape(EMAIL_FROM)}. '
             f'We never ask for your password or card details by email.</p></td></tr></table>')
 
 
@@ -223,7 +231,7 @@ async def verify_admin(x_admin_passcode: str = Header(None)):
     return {"ok": True}
 
 
-# ---------------- Testimonials ----------------
+# ---------------- Testimonials (unchanged) ----------------
 class Testimonial(BaseModel):
     id: str = Field(default_factory=lambda: str(uuid.uuid4()))
     name: str
