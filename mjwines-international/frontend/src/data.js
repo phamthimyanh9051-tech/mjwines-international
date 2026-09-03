@@ -1,0 +1,237 @@
+// Central content for MJ Wines International
+
+export const LOGO = "https://customer-assets-7cd3h4nn.emergentagent.net/job_eve-wine-concierge/artifacts/jnplqmzx_MJ%20Wines%20Logo%20%28Mei%20Jiu%29.webp";
+
+export const WINE_STAIN = "https://static.prod-images.emergentagent.com/jobs/eee32456-2dec-46d9-ad7a-0dddf935c2f9/images/c6ee76a9c12350050a95d62a90b60cb9d0dee3149117130533503670e6a9084f.jpeg";
+
+export const IMG = {
+  heroToast: "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?crop=entropy&cs=srgb&fm=jpg&q=85&w=1600",
+  heroPour: "https://images.pexels.com/photos/33040137/pexels-photo-33040137.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=1600",
+  heroDinner: "https://images.unsplash.com/photo-1523521803700-b3bcaeab0150?crop=entropy&cs=srgb&fm=jpg&q=85&w=1600",
+  heroNetworking: "https://images.unsplash.com/photo-1515169067868-5387ec356754?crop=entropy&cs=srgb&fm=jpg&q=85&w=1600",
+  pourDark: "https://images.unsplash.com/photo-1730463527126-2c1de69ad1aa?crop=entropy&cs=srgb&fm=jpg&q=85&w=1200",
+  glassLight: "https://images.unsplash.com/photo-1762397598648-3862c189487c?crop=entropy&cs=srgb&fm=jpg&q=85&w=1200",
+  networking: "https://images.unsplash.com/photo-1724866976376-4b217d29a462?crop=entropy&cs=srgb&fm=jpg&q=85&w=1200",
+  networking2: "https://images.unsplash.com/photo-1508997449629-303059a039c0?crop=entropy&cs=srgb&fm=jpg&q=85&w=1200",
+  dining: "https://images.unsplash.com/photo-1536392706976-e486e2ba97af?crop=entropy&cs=srgb&fm=jpg&q=85&w=1200",
+  diningTable: "https://images.pexels.com/photos/17057034/pexels-photo-17057034.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=1200",
+  diningLong: "https://images.unsplash.com/photo-1484156818044-c040038b0719?crop=entropy&cs=srgb&fm=jpg&q=85&w=1200",
+  eve: "https://customer-assets-7cd3h4nn.emergentagent.net/job_eve-wine-concierge/artifacts/733m5rrf_Eve%20photo%20standing%20small.webp",
+  eveSeated: "https://customer-assets-7cd3h4nn.emergentagent.net/job_eve-wine-concierge/artifacts/k80thrvx_IMG-20221126-WA0027.jpg",
+  eveGoldenHour: "https://static.prod-images.emergentagent.com/jobs/eee32456-2dec-46d9-ad7a-0dddf935c2f9/images/b1434620f32c22dd44836d2475a2b50dc90ca5384660c2c6c95bb63572b07a3b.jpeg",
+  satin: "https://images.unsplash.com/photo-1634648852208-fc7e55a15751?crop=entropy&cs=srgb&fm=jpg&q=85&w=1600",
+  glassesLine: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?crop=entropy&cs=srgb&fm=jpg&q=85&w=1200",
+  cheers: "https://images.pexels.com/photos/30539613/pexels-photo-30539613.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=1200",
+};
+
+export const CONTACT = {
+  whatsapp: "+65 8882 6474",
+  whatsapp2: "+65 9069 5948",
+  whatsappLink: "https://wa.me/6588826474",
+  whatsappLink2: "https://wa.me/6590695948",
+  email: "hello@mjwines.co",
+  address: "Singapore",
+  instagram: "https://www.instagram.com/mjwines.co",
+  instagramEve: "https://www.instagram.com/eve.sommelian",
+  portfolio: "https://heyzine.com/flip-book/a3a4def8cc.html",
+};
+
+export const EXPERIENCES = [
+  {
+    slug: "corporate-wine-events",
+    title: "Corporate Wine Events",
+    tagline: "Client appreciation, networking, launches and celebrations.",
+    image: IMG.networking,
+    who: "For companies hosting clients, engaging teams, launching products or celebrating milestones.",
+    occasions: ["Client appreciation", "Networking sessions", "Team engagement", "Product launches", "Company functions"],
+    provides: ["Event concept", "Wine curation & supply", "Food pairing", "Venue coordination", "Guest engagement & hosting", "Event-day coordination"],
+    enhancements: ["Live entertainment", "Custom wine labels", "Curated gifting", "Master of ceremonies"],
+  },
+  {
+    slug: "wine-appreciation-workshops",
+    title: "Wine Appreciation Workshops",
+    tagline: "Interactive, educational tastings for teams and groups.",
+    image: IMG.glassesLine,
+    who: "For corporate teams, associations, customer groups and private circles who want to learn while they connect.",
+    occasions: ["Team bonding", "Customer engagement", "Association events", "Private groups"],
+    provides: ["Guided tasting flights", "Sommelier-led education", "Curated wine selection", "Interactive formats", "Tasting notes & materials"],
+    enhancements: ["Food pairing", "Blind tasting games", "Custom themes", "Branded materials"],
+  },
+  {
+    slug: "wine-pairing-dinners",
+    title: "Wine Pairing Dinners",
+    tagline: "Curated wine and food, thoughtfully matched.",
+    image: IMG.dining,
+    who: "For corporate hosting, private dining, restaurants and special celebrations.",
+    occasions: ["Corporate hosting", "Restaurant collaborations", "Private dining", "Special celebrations"],
+    provides: ["Menu & wine pairing design", "Wine curation & supply", "Venue coordination", "Hosting & storytelling", "Service coordination"],
+    enhancements: ["Live music", "Custom menus", "Gifting", "Photography"],
+  },
+  {
+    slug: "private-celebrations",
+    title: "Private Celebrations",
+    tagline: "Birthdays, anniversaries, weddings and intimate gatherings.",
+    image: IMG.cheers,
+    who: "For private clients marking a milestone with people who matter.",
+    occasions: ["Birthdays", "Anniversaries", "Weddings", "Intimate gatherings", "Family celebrations"],
+    provides: ["Experience concept", "Wine curation", "Venue & catering coordination", "Entertainment coordination", "Event-day support"],
+    enhancements: ["Custom wine labels", "Yacht experiences", "Entertainment", "Gifting"],
+  },
+  {
+    slug: "brand-activations",
+    title: "Brand Activations",
+    tagline: "Launches, collaborations and experiential marketing.",
+    image: IMG.networking2,
+    who: "For lifestyle brands, launches and cross-industry collaborations.",
+    occasions: ["Product launches", "Business networking", "Lifestyle campaigns", "Experiential marketing"],
+    provides: ["Experience design", "Wine curation", "Partner coordination", "Guest engagement", "Logistics"],
+    enhancements: ["Custom labels", "Performers", "Portable KTV", "Branded gifting"],
+  },
+  {
+    slug: "corporate-gifting",
+    title: "Corporate Gifting",
+    tagline: "Curated wine gifts and branded packages.",
+    image: IMG.glassLight,
+    who: "For client gifts, festive campaigns, appreciation programmes and branded packages.",
+    occasions: ["Client appreciation", "Festive gifting", "Milestone gifts", "Branded packages"],
+    provides: ["Curated wine selection", "Custom packaging", "Branded messaging", "Logistics & delivery"],
+    enhancements: ["Custom wine labels", "Personalised notes", "Festive themes"],
+  },
+  {
+    slug: "custom-wine-labels",
+    title: "Custom Wine Labels",
+    tagline: "Personalised bottles for companies and celebrations.",
+    image: IMG.pourDark,
+    who: "For companies, launches, weddings, gifts, milestones and celebrations.",
+    occasions: ["Corporate branding", "Weddings", "Launches", "Milestones", "Gifts"],
+    provides: ["Label design", "Wine selection", "Production coordination", "Delivery"],
+    enhancements: ["Gift packaging", "Event integration", "Bulk orders"],
+  },
+];
+
+export const EVENT_STORIES = [
+  {
+    slug: "the-cellar-conversation",
+    title: "The Cellar Conversation",
+    category: "Corporate",
+    tags: ["Corporate", "Wine Dinner", "Networking"],
+    image: IMG.heroDinner,
+    venue: "Private dining room, CBD",
+    guests: "40 senior executives",
+    brief: "A financial firm wanted to thank its top clients with an evening that felt personal rather than transactional.",
+    experience: "Guests moved through four thoughtfully paired courses while Eve told the story behind each wine, turning strangers into a table of conversation.",
+    delivered: ["Event concept", "Wine curation", "Food pairing", "Venue coordination", "Hosting", "Event-day coordination"],
+    wines: "A vertical of Old World reds chosen to open up over the evening, opening light and building to a bold, memorable finish.",
+    outcome: "The client rebooked for two further events within the same quarter.",
+  },
+  {
+    slug: "first-pour-masterclass",
+    title: "First Pour",
+    category: "Workshop",
+    tags: ["Workshop", "Corporate"],
+    image: IMG.glassesLine,
+    venue: "Design studio, Tanjong Pagar",
+    guests: "25 marketing team members",
+    brief: "A creative agency wanted a team-bonding session that was social, hands-on and genuinely educational.",
+    experience: "A guided blind tasting turned into a friendly competition — laughter, debate and a few surprised faces as expectations met reality in the glass.",
+    delivered: ["Wine curation", "Sommelier hosting", "Guest engagement", "Tasting materials"],
+    wines: "Six contrasting styles chosen to challenge assumptions about price, colour and region.",
+    outcome: "Rated the team's favourite offsite of the year.",
+  },
+  {
+    slug: "golden-hour-yacht",
+    title: "Golden Hour",
+    category: "Private Celebration",
+    tags: ["Private Celebration", "Venue"],
+    image: IMG.cheers,
+    venue: "Private yacht, Marina",
+    guests: "18 close friends & family",
+    brief: "A milestone birthday that needed to feel intimate, effortless and unforgettable.",
+    experience: "Chilled whites and sparkling greeted guests as the city skyline slipped by, with wine service that never interrupted the moment.",
+    delivered: ["Experience concept", "Wine curation", "Yacht coordination", "Event-day support", "Gifting"],
+    wines: "Crisp coastal whites and a celebratory sparkling for the final toast.",
+    outcome: "\"Every detail was handled. We simply enjoyed ourselves.\"",
+  },
+  {
+    slug: "the-launch-table",
+    title: "The Launch Table",
+    category: "Brand Collaboration",
+    tags: ["Brand Collaboration", "Networking"],
+    image: IMG.networking,
+    venue: "Concept space, Orchard",
+    guests: "80 guests & press",
+    brief: "A lifestyle brand needed a launch that felt experiential rather than a standard press event.",
+    experience: "Wine stations paired to the brand's story invited guests to taste their way through the narrative while networking naturally.",
+    delivered: ["Experience design", "Wine curation", "Partner coordination", "Guest engagement", "Logistics"],
+    wines: "A flight selected to mirror the brand's journey from bold origins to refined present.",
+    outcome: "Strong press coverage and follow-on collaboration enquiries.",
+  },
+  {
+    slug: "a-toast-to-partnership",
+    title: "A Toast to Partnership",
+    category: "Hospitality",
+    tags: ["Hospitality", "Corporate"],
+    image: IMG.diningTable,
+    venue: "Hotel ballroom",
+    guests: "120 banquet guests",
+    brief: "A hotel partner wanted to elevate a corporate banquet with a curated wine experience without competing on retail.",
+    experience: "A collaborative wine programme complemented the kitchen, with staff briefed to serve and speak to each pour with confidence.",
+    delivered: ["Wine selection", "Wine pairing consultation", "Staff briefing", "Event wine logistics", "Banquet support"],
+    wines: "A versatile banquet selection built to pair across a broad, crowd-pleasing menu.",
+    outcome: "An ongoing hospitality partnership across multiple functions.",
+  },
+  {
+    slug: "gifts-that-say-thank-you",
+    title: "Gifts That Say Thank You",
+    category: "Gifting",
+    tags: ["Gifting", "Corporate"],
+    image: IMG.glassLight,
+    venue: "Delivered island-wide",
+    guests: "200+ recipients",
+    brief: "A firm wanted year-end client gifts that felt personal and on-brand rather than generic hampers.",
+    experience: "Custom-labelled bottles paired with a handwritten note arrived beautifully packaged — a small moment of delight for every recipient.",
+    delivered: ["Wine curation", "Custom labels", "Bespoke packaging", "Logistics & delivery"],
+    wines: "An approachable, universally enjoyed style chosen to suit a broad recipient list.",
+    outcome: "Repeated as an annual festive gifting programme.",
+  },
+];
+
+export const WHY_CHOOSE = [
+  { t: "14+ Years of Wine Expertise", d: "Over fourteen years in the wine industry, guiding businesses and private clients with confidence." },
+  { t: "End-to-End Event Support", d: "From first concept to the final toast, every detail considered and coordinated." },
+  { t: "Trusted Partner Network", d: "Established relationships with venues, caterers, entertainers and event specialists." },
+  { t: "Curated International Wines", d: "Wines sourced from international producers, chosen to suit your audience and occasion." },
+  { t: "Flexible Solutions", d: "Experiences shaped around different audiences, formats and budgets." },
+  { t: "One Point of Contact", d: "A single, reliable point of coordination so hosting feels effortless." },
+];
+
+export const PROCESS = [
+  { n: "01", t: "Share Your Occasion", d: "Tell us your audience, goals and the feeling you want to create." },
+  { n: "02", t: "Receive a Curated Concept", d: "We propose the wines, experience and supporting partners for your event." },
+  { n: "03", t: "Confirm the Details", d: "We refine, coordinate and lock in every element around your needs." },
+  { n: "04", t: "Enjoy the Experience", d: "You host with ease while we handle the details, from setup to final toast." },
+];
+
+export const EVENT_TYPES = [
+  "Corporate Wine Event", "Wine Appreciation Workshop", "Wine Pairing Dinner",
+  "Private Celebration", "Brand Activation", "Corporate Gifting", "Custom Wine Labels", "Other",
+];
+
+export const SERVICE_OPTIONS = [
+  "Wine curation", "Venue", "Catering", "Entertainment", "Portable KTV",
+  "Yacht", "Corporate gifts", "Custom wine labels", "Event hosting", "Full event solution",
+];
+
+// Supporting event solutions — coordinated through trusted partners
+export const SUPPORTING_SOLUTIONS = [
+  { t: "Pop-Up Mobile Bars", d: "Stylish mobile bars brought to your venue for a seamless service moment." },
+  { t: "Carnival & Game Booths", d: "Carnival supplies and interactive game booths for playful, crowd-pleasing events." },
+  { t: "Event Entertainment", d: "Dancers, magicians, bubble masters, musicians, aerial, LED and fire performers." },
+  { t: "Master of Ceremonies", d: "Professional hosts and MCs to keep your event flowing." },
+  { t: "Portable KTV Systems", d: "Bring the party anywhere with portable karaoke setups." },
+  { t: "Yacht Experiences", d: "Wine-led celebrations on the water for something unforgettable." },
+  { t: "Venues & F&B Spaces", d: "Restaurants, event spaces and venues matched to your occasion." },
+  { t: "Catering Services", d: "Menus and food styling to complement the wines." },
+  { t: "Corporate Gifting", d: "Curated and custom-labelled wine gifts, beautifully packaged." },
+  { t: "Event Logistics", d: "Setup, coordination and event-day management, handled for you." },
+];
